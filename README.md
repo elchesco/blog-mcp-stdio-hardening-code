@@ -23,12 +23,3 @@ python3 00-the-bug/vulnerable_spawn.py && rm -rf /tmp/mcp-demo-bin
 python3 01-safe-spawn/safe_spawn.py
 ```
 
-## Pin versions used in the post
-
-| Thing | Version |
-|---|---|
-| Langflow | vulnerable: before 1.9.0; advisory lists 1.8.3 affected, 1.9.0 patched |
-| Azure MCP Server | 3.0 (stable 12 October 2026) |
-| Claude Code | 2.1.280 |
-| @playwright/mcp (example pin) | 0.0.83 |
-| Python | 3.10+ (stdlib only) |
