@@ -1,0 +1,37 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadOneServicesLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:FilterLogEvents",
+        "logs:GetLogEvents",
+        "logs:StartQuery",
+        "logs:GetQueryResults"
+      ],
+      "Resource": [
+        "arn:aws:logs:us-east-1:111122223333:log-group:/myapp/backend",
+        "arn:aws:logs:us-east-1:111122223333:log-group:/myapp/backend:*"
+      ]
+    },
+    {
+      "Sid": "ReadMetricsNoResourceScopingExists",
+      "Effect": "Allow",
+      "Action": ["cloudwatch:GetMetricData", "cloudwatch:ListMetrics"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "NeverTouchIdentityOrSecrets",
+      "Effect": "Deny",
+      "Action": [
+        "iam:*",
+        "sts:AssumeRole",
+        "secretsmanager:GetSecretValue",
+        "ssm:GetParameter*",
+        "kms:Decrypt"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
