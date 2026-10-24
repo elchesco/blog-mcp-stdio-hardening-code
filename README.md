@@ -1,7 +1,5 @@
 # Code companion: an MCP stdio server is a shell command
 
-Stand-alone files for the post. Placeholders match the earlier posts:
-`myapp`, `appuser`, `acme/myapp`, `example.com`, account `111122223333`.
 
 | Folder | Post section | What it is |
 |---|---|---|
